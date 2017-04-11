@@ -1,7 +1,15 @@
-require('/pages/login_page.js');
+var login_page = require('../pages/login_page.js');
 describe('greentube tests', function() {
 	browser.ignoreSynchronization = true;
-	//var scripts = document.location.pathname;
-	//console.log(scripts);
+	console.log("----------****--------");
+	
+	it('should login', function() {
+	
+	browser.get('https://www.gametwist.com/en/');
+	browser.driver.manage().window().maximize();
+	login_page.enterUserName('test1');
+
+	
+  }); 
 	
 });
