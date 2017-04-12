@@ -50,7 +50,7 @@ var home_page = function() {
 	};
 	
 	this.results = function(){
-		var results = element(by.css('[id="aspnetForm"]')); 
+		var results = element(by.css('.game-search__list li:nth-child(3)')); 
 		return results;
 	};
 	this.closePopupButton = function(){

@@ -16,7 +16,8 @@ describe('searchbox functionality test', function() {
 	home_page.click_login_button();
 		browser.driver.sleep(5000);
 	home_page.searchGame('slots');
-	home_page.results(7).click();
+	browser.driver.sleep(5000);
+	home_page.results().click();
 	browser.driver.sleep(5000);
 	});
 	
