@@ -20,8 +20,9 @@ exports.config = {
 	
   }],
   suites: {
-  Createnew:'test/login.js',
-  //Navigation:'test/navigation.js'
+  //Login:'test/login.js',
+  //Navigation:'test/navigation.js',
+  Search:'test/searchbox.js'
   }
   
 };

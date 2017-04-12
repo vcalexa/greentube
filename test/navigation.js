@@ -1,18 +1,47 @@
-var login_page = require('../pages/login_page.js');
+var home_page = require('../pages/home_page.js');
+browser.ignoreSynchronization = true;
 describe('greentube tests2', function() {
 	
 	
-	it('should navigate to the correct pages', function() {
 	
-	browser.get('https://www.gametwist.com/en/');
-	browser.driver.manage().window().maximize();
-	login_page.enterUserName();
-	login_page.enterPassword();
-	login_page.click_login_button();
+	 beforeEach(function() {
+        browser.get('https://www.gametwist.com/en/');
+		browser.driver.manage().window().maximize();
+    });
+	
+	it('should navigate to the correct Slots page', function() {
 	
 	
-    browser.driver.sleep(5000);
-	expect(login_page.nickname().getText()).toEqual('vladgreentube');
+	home_page.clickSlotsButton();
+	var currentUrl = browser.getCurrentUrl();
+	expect(currentUrl).toEqual('https://www.gametwist.com/en/games/slots/');
+	
   }); 
+  
+  it('should navigate to the correct Bingo page', function() {
+	
+	home_page.clickBingoButton();
+	var currentUrl = browser.getCurrentUrl();
+	expect(currentUrl).toEqual('https://www.gametwist.com/en/games/bingo/');
+	
+  }); 
+  
+  it('should navigate to the correct Casino page', function() {
+	
+	home_page.clickCasinoButton();
+	var currentUrl = browser.getCurrentUrl();
+	expect(currentUrl).toEqual('https://www.gametwist.com/en/games/casino/');
+	
+  }); 
+  
+  it('should navigate to the correct Poker page', function() {
+	
+	home_page.clickPokerButton();
+	var currentUrl = browser.getCurrentUrl();
+	expect(currentUrl).toEqual('https://www.gametwist.com/en/games/poker/');
+	
+  }); 
+  
+  
 	
 });
