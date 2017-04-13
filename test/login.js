@@ -28,10 +28,9 @@ describe('log in and out tests', function() {
 		home_page.dismissPopup();
 	};
 	expect(home_page.nickname().getText()).toEqual('vladgreentube');
-	browser.driver.sleep(2000);
 	home_page.nickname().click();
 	element(by.buttonText('Log out')).click();
-	browser.driver.sleep(3000);
+	browser.driver.sleep(2000);
 	expect(home_page.nickname().getText()).toEqual('');//after logout the nickname field should be empty
 	
   }); 
