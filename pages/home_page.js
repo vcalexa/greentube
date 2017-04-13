@@ -44,13 +44,25 @@ var home_page = function() {
 	
 	};
 	
-	this.searchGame  = function(text){
-		element(by.id('ctl00_cphNavAndSearch_ctl01_gameSearch')).sendKeys(text);
-	
+	this.searchGame  = function(){
+		var search = element(by.id('ctl00_cphNavAndSearch_ctl01_gameSearch'));
+	    return search;
 	};
 	
-	this.results = function(){
-		var results = element(by.css('.game-search__list li:nth-child(3)')); 
+	this.language  = function(){
+		var lang = element(by.css('.flag'));
+	    return lang;
+	};
+	
+	this.selectGerman  = function(){
+		var german = element(by.css('.select-language__list li:nth-child(2)'));//german option
+	    german.click();
+	};
+	
+	
+	
+	this.result = function(){
+		var results = element(by.css('.game-search__list li:nth-child(3)')); //th3rd result from searchbox
 		return results;
 	};
 	this.closePopupButton = function(){

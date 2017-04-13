@@ -8,7 +8,10 @@ describe('greentube tests2', function() {
         browser.get('https://www.gametwist.com/en/');
 		browser.driver.manage().window().maximize();
     });
-	
+
+	afterEach(function(){
+			browser.driver.close();
+	});
 	it('should navigate to the correct Slots page', function() {
 	
 	
