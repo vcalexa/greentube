@@ -19,15 +19,12 @@ exports.config = {
 	}
 	
   }],
-  suites: {
-	   Login:'test/login.js',
-  Language:'test/changelanguage.js',
-  Search:'test/searchbox.js',
+  specs: [
+	   'test/login.js',
+	  'test/navigation.js',
+  'test/changelanguage.js',
+ 'test/searchbox.js',
  
-  //Logout:'test/logout.js',
- // Navigation:'test/navigation.js',
-//  Language:'test/changelanguage.js'
- 
-  }
+  ]
   
 };
