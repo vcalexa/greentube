@@ -21,9 +21,9 @@ exports.config = {
   }],
   specs: [
 	   'test/login.js',
-	  'test/navigation.js',
-  'test/changelanguage.js',
- 'test/searchbox.js',
+	   'test/navigation.js',
+       'test/changelanguage.js',
+       'test/searchbox.js',
  
   ]
   
