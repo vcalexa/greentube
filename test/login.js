@@ -10,6 +10,7 @@ describe('log in and out tests', function() {
     });
 	
 	it('should not login with invalid credentials' , function(){
+		home_page.acceptCookies();
 		home_page.enterUserName(testData.badusername);
 	home_page.enterPassword(testData.badpassword);
 	home_page.click_login_button();

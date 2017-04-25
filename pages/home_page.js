@@ -1,5 +1,12 @@
 var home_page = function() {
 	
+	this.acceptCookies = function(){
+		
+		var okButton= $('.js-cookie-accept-btn');
+		browser.wait(() => okButton.isPresent(), 3000);
+		okButton.click();
+	}
+	
 	this.enterUserName  = function(text){
 		element(by.name('login-nickname')).sendKeys(text);
 	

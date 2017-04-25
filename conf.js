@@ -7,11 +7,14 @@ exports.config = {
     browserName: 'chrome',
 	'chromeOptions':{
 		
-	//to allows notificatons	
+		
+	'args': ['disable-infobars=true'], //disable 'chrome is controlled by automation" message
+	
+		
 	prefs:{
 		
-		'profile.managed_default_content_settings.notifications':1,
-		'credentials_enable_service': false
+		'profile.managed_default_content_settings.notifications':1, //to allows notificatons
+		'credentials_enable_service': false   //don't ask to save passwords
 	}
 	
 	}
