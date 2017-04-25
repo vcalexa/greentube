@@ -49,14 +49,19 @@ var home_page = function() {
 	    return search;
 	};
 	
+	
 	this.language  = function(){
-		var lang = element(by.css('.flag'));
+		var lang = element(by.css('.select-language__button'));
+		browser.wait(() => lang.isPresent(), 3000);
 	    return lang;
+		browser.sleep(500);
 	};
 	
 	this.selectGerman  = function(){
 		var german = element(by.css('.select-language__list li:nth-child(2)'));//german option
+		browser.wait(() => german.isPresent(), 3000);
 	    german.click();
+		browser.sleep(500);
 	};
 	
 	
