@@ -11,9 +11,7 @@ exports.config = {
 	prefs:{
 		
 		'profile.managed_default_content_settings.notifications':1,
-		'profile': {
-                  'password_manager_enabled': false
-              }
+		'credentials_enable_service': false
 	}
 	
 	}
