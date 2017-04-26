@@ -61,7 +61,7 @@ var home_page = function() {
 		var lang = element(by.css('.select-language__button'));
 		browser.wait(() => lang.isPresent(), 3000);
 	    return lang;
-		browser.sleep(500);
+		browser.sleep(2000);
 	};
 	
 	this.selectGerman  = function(){
